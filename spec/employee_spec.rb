@@ -3,7 +3,7 @@ require 'pry'
 
 describe Employee do
 
-  before(:each) { @employee = Employee.new(firstname: "Antonio", lastname: "Chavez", account_number: 1232344545, hours_week: 40) }
+  before(:each) { @employee = Employee.new(:firstname => "Antonio", :lastname => "Chavez", :account_number => 1232344545, :hours_week => 40) }
 
   context '#validations' do
 
