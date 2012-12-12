@@ -15,10 +15,7 @@ describe Employee do
       @employee.rate.should == 25
     end
 
-    it 'should validate if the account number is the same' do
-      employee = Employee.new(firstname: "Antonio", lastname: "Chavez", account_number: 1232344545, hours_week: 40)
-      Employee.all.count.should == 1
-    end
+    pending 'ADD should validate if the account number is the same'
 
   end
 
@@ -29,8 +26,10 @@ describe Employee do
       @employee.salary.should == 875
     end
 
-    it 'should save the objects as class attribute' do
-      Employee.all.count.should == 1
+    pending 'ADD should save the objects as class attribute'
+
+    it 'should calculate the total of salaries' do
+      Employee.total.should == Employee.all.map(&:salary).inject(:+)
     end
 
   end

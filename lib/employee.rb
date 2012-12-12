@@ -10,9 +10,9 @@ class Employee
     @lastname = opts[:lastname]
     @account_number = opts[:account_number]
     @hours_week = opts[:hours_week]
-    @firstname = opts[:worked_hours].nil? ? 0 : opts[:worked_hours]
+    @worked_hours = opts[:worked_hours].nil? ? 0 : opts[:worked_hours]
     @rate = opts[:rate].nil? ? 25 : opts[:rate]
-    @@all << self unless account_number_uniq?
+    @@all << self # unless account_number_uniq?
   end
 
   def salary
@@ -23,10 +23,14 @@ class Employee
     @@all
   end
 
-  private
-  
-  def account_number_uniq?
-    return true unless @@all.select { |employee| employee.account_number == self.account_number }.shift
+  def self.total
+    @@all.map(&:salary).inject(:+)
   end
+
+  #private
+  
+  #def account_number_uniq?
+    #return true unless @@all.select { |employee| employee.account_number == self.account_number }.shift
+  #end
 
 end
