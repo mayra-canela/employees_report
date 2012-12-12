@@ -12,7 +12,7 @@ class Employee
     @hours_week = opts[:hours_week]
     @worked_hours = opts[:worked_hours].nil? ? 0 : opts[:worked_hours]
     @rate = opts[:rate].nil? ? 25 : opts[:rate]
-    @@all << self # unless account_number_uniq?
+    @@all << self
   end
 
   def salary
@@ -26,11 +26,5 @@ class Employee
   def self.total
     @@all.map(&:salary).inject(:+)
   end
-
-  #private
-  
-  #def account_number_uniq?
-    #return true unless @@all.select { |employee| employee.account_number == self.account_number }.shift
-  #end
 
 end
