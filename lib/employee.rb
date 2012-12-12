@@ -39,7 +39,9 @@ public
     puts  "|   Fullname    | Account Number | Hours week | Worked hours week | Rate |salary |"
     puts "#{r.imprimir}   #{r.salary}"
     puts "#{r2.imprimir}   #{r.salary}"
-    puts "                                                                    Total  #{self.total}"
+    puts "------------------------------------------------------------------------------------"
+    puts "                                                                   Total | #{self.total}"
+    puts "This deserves a happy face:D"
 end
 
 
