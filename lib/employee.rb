@@ -34,10 +34,12 @@ public
   end
     
     r = Employee.new(:firstname => "Antonio", :lastname => "Chavez", :account_number => 123234454444425, :hours_week => 40, :worked_hours =>20) 
+    r2 = Employee.new(:firstname =>"Mayra  ", :lastname => "Canela", :account_number => 123456765445525, :hours_week => 40, :worked_hours =>20) 
 
     puts  "|   Fullname    | Account Number | Hours week | Worked hours week | Rate |salary |"
     puts "#{r.imprimir}   #{r.salary}"
-puts "#{@all}"
+    puts "#{r2.imprimir}   #{r.salary}"
+    puts "                                                                    Total  #{self.total}"
 end
 
 
