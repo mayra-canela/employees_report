@@ -11,7 +11,7 @@ describe Employee do
       expect { Employee.new }.to raise_error
     end
 
-    it 'should initialize rate with zero' do
+    it 'should initialize rate with a value' do
       @employee.rate.should == 25
     end
 

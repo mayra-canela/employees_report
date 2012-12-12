@@ -12,7 +12,7 @@ class Employee
     @hours_week = opts[:hours_week]
     @worked_hours = opts[:worked_hours].nil? ? 0 : opts[:worked_hours]
     @rate = opts[:rate].nil? ? 25 : opts[:rate]
-    @@all << self
+    @@all << self # this object will store inside this array
   end
 
   def salary
